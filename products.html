@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Shree Balaji Steel Enterprises</title>
+    <meta name="description" content="Explore our range of TMT bars, structural steel angles, beams, channels, MS/GI pipes, steel sheets, plates, cement, and construction materials.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+        .specs-table th, .specs-table td {
+            padding: 0.4rem 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .specs-table th {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        .app-list {
+            font-size: 0.85rem;
+            margin-bottom: 1.25rem;
+            padding-left: 1.25rem;
+            list-style-type: square;
+        }
+        .app-list li {
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-industry logo-icon"></i>
+                <div>
+                    <span class="logo-text">SHREE BALAJI</span>
+                    <span class="logo-sub">Steel Enterprises</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                <div class="nav-item">
+                    <a href="products.html" class="nav-link active">Products <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a>
+                    <div class="mega-menu">
+                        <div>
+                            <h5 class="mega-title">Reinforcement & Pipes</h5>
+                            <ul class="mega-links">
+                                <li><a href="products.html?cat=tmt"><i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> TMT Bars & Rods</a></li>
+                                <li><a href="products.html?cat=pipes"><i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> MS & GI Pipes</a></li>
+                                <li><a href="products.html?cat=pipes"><i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> Square & Round Pipes</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="mega-title">Structural & Sheets</h5>
+                            <ul class="mega-links">
+                                <li><a href="products.html?cat=structural"><i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> Angles, Channels & Beams</a></li>
+                                <li><a href="products.html?cat=sheets"><i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> Steel Sheets & Plates</a></li>
+                                <li><a href="products.html?cat=materials"><i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> Cement & Construction</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </div>
+                <div class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </div>
+                <div class="nav-item">
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </div>
+                <div class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <a href="#" class="btn btn-accent btn-sm" data-open-quote>Get Quote</a>
+                <button class="hamburger" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+    <!-- ==========================================================================
+       PAGE HEADER
+       ========================================================================== -->
+    <section class="hero" style="background-image: url('hero_warehouse.jpg'); min-height: 250px; padding: 3rem 0;">
+        <div class="container">
+            <span class="badge">Product Catalog</span>
+            <h1 class="hero-title" style="font-size: 2.75rem; margin-bottom: 0.5rem;">Materials & Specifications</h1>
+            <p class="hero-sub" style="margin-bottom: 0;">Explore industrial grades, dimensions, and structural options available for dispatch.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SEARCH, FILTERS, AND PRODUCTS GRID
+       ========================================================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <!-- Search & Filters -->
+            <div class="product-controls reveal-up">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="product-search" class="search-input" placeholder="Search products, grades, sizes...">
+                </div>
+                <div class="filter-wrapper">
+                    <button class="filter-btn active" data-filter="all">All Items</button>
+                    <button class="filter-btn" data-filter="tmt">TMT Bars & Rods</button>
+                    <button class="filter-btn" data-filter="pipes">MS & GI Pipes</button>
+                    <button class="filter-btn" data-filter="structural">Structural Steel</button>
+                    <button class="filter-btn" data-filter="sheets">Sheets & Plates</button>
+                    <button class="filter-btn" data-filter="materials">Cement</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid-3" id="products-grid">
+                
+                <!-- Product 1: TMT Bars -->
+                <div class="product-card product-grid-item reveal-up" data-category="tmt">
+                    <div class="product-image">
+                        <img src="tmt_bars.jpg" alt="Stacked high-quality TMT steel bars">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">TMT Bars</span>
+                        <h4 class="product-title">Thermo-Mechanically Treated (TMT) Bars</h4>
+                        <p class="product-desc">High strength, seismically resilient reinforcement bars with excellent bendability and weldability.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Grades</th>
+                                        <th>Sizes (Diameter)</th>
+                                        <th>Standard</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fe 500, Fe 550, Fe 600</td>
+                                        <td>8mm, 10mm, 12mm, 16mm, 20mm, 25mm, 32mm</td>
+                                        <td>IS 1786</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Foundations & Columns</li>
+                            <li>High-rise structures</li>
+                            <li>Bridges & Flyovers</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="TMT Bars"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Iron Rods -->
+                <div class="product-card product-grid-item reveal-up" data-category="tmt">
+                    <div class="product-image">
+                        <img src="tmt_bars.jpg" alt="Stacked steel wire rods and rounds">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">TMT Bars</span>
+                        <h4 class="product-title">Iron Rods & MS Rounds</h4>
+                        <p class="product-desc">Solid round structural bars in Mild Steel for miscellaneous structural grates, brackets, and fabrications.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Finish</th>
+                                        <th>Sizes</th>
+                                        <th>Material</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Black hot-rolled</td>
+                                        <td>6mm to 50mm solid rounds</td>
+                                        <td>Grade IS 2062</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Window grills & safety gates</li>
+                            <li>Anchor bolts & dowel bars</li>
+                            <li>General structural fabrication</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="MS Round Rods"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: MS Pipes -->
+                <div class="product-card product-grid-item reveal-up" data-category="pipes">
+                    <div class="product-image">
+                        <img src="steel_pipes.jpg" alt="Mild Steel hollow tubes">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">MS & GI Pipes</span>
+                        <h4 class="product-title">Mild Steel (MS) Pipes & ERW Tubes</h4>
+                        <p class="product-desc">Black structural and hollow steel tubes. High loading strength with smooth weld seams.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Wall Thickness</th>
+                                        <th>Sizes (OD)</th>
+                                        <th>Class</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.6mm to 12mm</td>
+                                        <td>15mm (1/2") to 300mm (12") NB</td>
+                                        <td>Light, Medium, Heavy</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Industrial structural columns</li>
+                            <li>Liquid & gas transport lines</li>
+                            <li>Shed & truss columns</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="MS Pipes"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: GI Pipes -->
+                <div class="product-card product-grid-item reveal-up" data-category="pipes">
+                    <div class="product-image">
+                        <img src="steel_pipes.jpg" alt="Galvanized Iron pipes bundle">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">MS & GI Pipes</span>
+                        <h4 class="product-title">Galvanized Iron (GI) Pipes</h4>
+                        <p class="product-desc">Zinc-coated steel tubes. Maximum protection against environmental rusting and plumbing scale.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Zinc Coating</th>
+                                        <th>Sizing</th>
+                                        <th>Standards</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Min 360 g/m²</td>
+                                        <td>15mm (1/2") to 150mm (6") NB</td>
+                                        <td>IS 1239 / IS 3589</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Water piping and distribution</li>
+                            <li>Outdoor scaffolds & railings</li>
+                            <li>Coastal structural framing</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="GI Pipes"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Square & Round Tubes -->
+                <div class="product-card product-grid-item reveal-up" data-category="pipes">
+                    <div class="product-image">
+                        <img src="steel_pipes.jpg" alt="Square hollow sections SHS">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">MS & GI Pipes</span>
+                        <h4 class="product-title">Square & Rectangular Pipes (SHS/RHS)</h4>
+                        <p class="product-desc">Hollow structural sections engineered for high torsional resistance and neat geometric aesthetics.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Grade</th>
+                                        <th>Dimensions</th>
+                                        <th>Standard</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>YS 210, YS 310</td>
+                                        <td>20x20mm to 250x250mm sizes</td>
+                                        <td>IS 4923</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Solar support structures</li>
+                            <li>Modern architectural stairs</li>
+                            <li>Machinery frame assemblies</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="Square & Rectangular Sections"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Beams -->
+                <div class="product-card product-grid-item reveal-up" data-category="structural">
+                    <div class="product-image">
+                        <img src="structural_steel.jpg" alt="Heavy structural steel I beams">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">Structural Steel</span>
+                        <h4 class="product-title">Structural Steel Beams (I-Beams & H-Beams)</h4>
+                        <p class="product-desc">Heavy-duty structural sections built to carry massive vertical bending loads in building frames.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Range</th>
+                                        <th>Flange Width</th>
+                                        <th>Steel Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ISMB 100 to ISMB 600</td>
+                                        <td>Standard Indian Section</td>
+                                        <td>IS 2062 E250 / E350</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Multi-story structural framing</li>
+                            <li>Factory crane girders</li>
+                            <li>Bridge girders</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="Structural Beams"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7: Angles & Channels -->
+                <div class="product-card product-grid-item reveal-up" data-category="structural">
+                    <div class="product-image">
+                        <img src="structural_steel.jpg" alt="Steel channels and angles stacked">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">Structural Steel</span>
+                        <h4 class="product-title">MS Angles & Channels</h4>
+                        <p class="product-desc">L-sections (Angles) and C-sections (Channels) for core fabrication joints, supports, and structural trusses.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Angle Sizing</th>
+                                        <th>Channel Sizing</th>
+                                        <th>Grades</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>20x20x3mm to 200x200x20mm</td>
+                                        <td>ISMC 75 to ISMC 400</td>
+                                        <td>IS 2062 E250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Roofing trusses & purlins</li>
+                            <li>Electrical transmission towers</li>
+                            <li>Heavy vehicle trailer bodies</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="Angles & Channels"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8: Steel Sheets & Plates -->
+                <div class="product-card product-grid-item reveal-up" data-category="sheets">
+                    <div class="product-image">
+                        <img src="structural_steel.jpg" alt="Flat steel plates stacked">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">Sheets & Plates</span>
+                        <h4 class="product-title">MS Plates & Steel Sheets</h4>
+                        <p class="product-desc">Hot Rolled (HR) and Cold Rolled (CR) flat plates. High dimensional accuracy and flat finish.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Thickness</th>
+                                        <th>Finishes</th>
+                                        <th>Widths</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.2mm to 100mm</td>
+                                        <td>HR, CR, Galvanized, Chequered</td>
+                                        <td>1250mm, 1500mm, 2000mm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>Boiler & storage tank walls</li>
+                            <li>Industrial anti-slip floorings</li>
+                            <li>Heavy machinery mounting bases</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="Sheets & Plates"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9: Cement -->
+                <div class="product-card product-grid-item reveal-up" data-category="materials">
+                    <div class="product-image">
+                        <img src="construction_site.jpg" alt="Fresh concrete slurry placement">
+                    </div>
+                    <div class="product-info">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 0.5rem;">Cement</span>
+                        <h4 class="product-title">Core Construction Cement</h4>
+                        <p class="product-desc">OPC (Ordinary Portland Cement) and PPC (Portland Pozzolana Cement) from leading premium brands.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Grades</th>
+                                        <th>Packaging</th>
+                                        <th>Material Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Grade 43, Grade 53</td>
+                                        <td>50 kg moisture-proof bags</td>
+                                        <td>OPC / PPC mixes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">Key Applications:</h5>
+                        <ul class="app-list">
+                            <li>High-strength structural concrete</li>
+                            <li>Brick masonry and plaster walls</li>
+                            <li>Precast concrete blocks</li>
+                        </ul>
+
+                        <div class="product-actions" style="margin-top: auto;">
+                            <a href="#" class="btn btn-primary btn-sm" style="width: 100%;" data-open-quote data-product="Cement"><i class="fa-solid fa-file-invoice-dollar"></i> Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid-4" style="gap: 2rem; margin-bottom: 2rem;">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fa-solid fa-industry logo-icon" style="font-size: 1.5rem;"></i>
+                        <span class="footer-logo-text">SHREE BALAJI</span>
+                    </a>
+                    <p class="footer-desc">Premium distributor of iron rods, structural beams, MS/GI pipes, angles, and core construction cement since 2011.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://wa.me/919999999999" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html?cat=tmt">Fe 500 / 550 TMT Bars</a></li>
+                        <li><a href="products.html?cat=pipes">MS & GI Pipes</a></li>
+                        <li><a href="products.html?cat=structural">Channels & Beams</a></li>
+                        <li><a href="products.html?cat=sheets">Steel Sheets & Plates</a></li>
+                        <li><a href="products.html?cat=materials">Cement Varieties</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+                        <span>12/A Industrial Area, Sector 4, Gandhidham, Gujarat - 370201</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone footer-contact-icon"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope footer-contact-icon"></i>
+                        <span>info@shreebalajisteel.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-clock footer-contact-icon"></i>
+                        <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shree Balaji Steel Enterprises. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       FLOATING ACTIONS (WhatsApp, Call, Scroll Top)
+       ========================================================================== -->
+    <div class="floating-actions">
+        <a href="tel:+919876543210" class="floating-btn btn-call" aria-label="Call Now"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20requesting%20a%20steel%20quote." target="_blank" rel="noopener" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <button id="back-to-top" class="floating-btn btn-totop" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+
+    <!-- ==========================================================================
+       REQUEST QUOTE MODAL POPUP
+       ========================================================================== -->
+    <div id="quote-modal" class="modal-overlay">
+        <div class="modal-container">
+            <span class="modal-close"><i class="fa-solid fa-xmark"></i></span>
+            <div class="modal-header">
+                <h3 class="modal-title">Request Quotation</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Fill details and our sales agent will call you with prices within 1 business hour.</p>
+            </div>
+            <form id="modal-quote-form">
+                <div class="form-group">
+                    <label for="modal-name" class="form-label">Full Name *</label>
+                    <input type="text" id="modal-name" class="form-control" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone" class="form-label">Phone Number *</label>
+                    <input type="tel" id="modal-phone" class="form-control" placeholder="Enter phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email" class="form-label">Email Address</label>
+                    <input type="email" id="modal-email" class="form-control" placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="modal-product" class="form-label">Required Product Category *</label>
+                    <select id="modal-product" class="form-control" required style="-webkit-appearance: listbox;">
+                        <option value="">Select Category</option>
+                        <option value="TMT Bars">TMT Bars & Rods</option>
+                        <option value="MS & GI Pipes">MS & GI Pipes</option>
+                        <option value="Structural Steel">Structural Beams & Angles</option>
+                        <option value="Steel Sheets & Plates">Steel Sheets & Plates</option>
+                        <option value="Cement">Cement Varieties</option>
+                        <option value="Bulk Construction Materials">Other Materials</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modal-msg" class="form-label">Quantity / Specifications Details</label>
+                    <textarea id="modal-msg" class="form-control" placeholder="E.g., 5 Tons of Fe 550 TMT Bars 12mm size needed for site in Gandhidham."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;"><i class="fa-solid fa-paper-plane"></i> Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Main JS -->
+    <script src="main.js"></script>
+
+    <!-- Page Specific Script for URL Routing -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat');
+            if (cat) {
+                const btn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+                if (btn) {
+                    btn.click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
